@@ -1,0 +1,32 @@
+{
+	"name": "dotnet-conf-scrapper",
+	"image": "ghcr.io/nikiforovall/devcontainers/dotnet:1.3.0-net5",
+	"settings": {
+		// "terminal.integrated.shell.linux": "/bin/bash"
+		"terminal.integrated.shell.linux": "/bin/zsh"
+		// "terminal.integrated.shell.linux": "/bin/sh"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		// dotnet
+		"ms-dotnettools.csharp",
+		"formulahendry.dotnet-test-explorer",
+		"tintoy.msbuild-project-tools",
+		"nikiforovall.surround-with-csharp",
+		// docker
+		"ms-azuretools.vscode-docker",
+		//git
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"codezombiech.gitignore",
+		// MISC
+		"k--kato.docomment",
+		"yzhang.markdown-all-in-one",
+		"dotjoshjohnson.xml",
+		"editorconfig.editorconfig",
+		"naumovs.trailing-semicolon",
+	],
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+	]
+}
